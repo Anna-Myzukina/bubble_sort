@@ -8,3 +8,16 @@ def bubble_sort(arr)
     arr
 end
 
+def bubble_sort_by(arr)
+    n = arr.size - 1
+    swapped = true
+    while swapped
+        swapped = false
+        n.times do |i|
+            if yield(arr[i], arr[i + 1]) > 0
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                swapped = true
+            end
+        end
+    end
+end
