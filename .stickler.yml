@@ -1,4 +1,11 @@
-linters:
-  stylelint:
-    config: 'stylelint.config.js'
+llinters:
+  rubocop:
+    display_cop_names: true
+files:
+  ignore:
+    - "bin/*"
+    - "db/*"
+    - "config/*"
+    - "Guardfile"
+    - "Rakefile"
     
